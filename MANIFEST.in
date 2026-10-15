@@ -1,0 +1,9 @@
+# The README links into docs/, and points at examples/. Neither is part of the
+# package, so a source distribution has to carry them or those links are dead for
+# anyone who did not clone the repo.
+include README.md
+include LICENSE
+
+recursive-include docs *.md
+recursive-include examples *.py
+recursive-include tests *.py

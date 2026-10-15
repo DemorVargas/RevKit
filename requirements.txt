@@ -1,0 +1,7 @@
+# Optional dependencies. The authoritative list is [project.optional-dependencies]
+# in pyproject.toml; this file is here because people look for it.
+#
+#   pip install -e ".[disasm]"   # capstone, for `revkit shell`
+#   pip install -e ".[dev]"      # pytest, to run the suite
+#
+# There are no required dependencies. The core is stdlib only.

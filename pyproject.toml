@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "revkit"
+version = "0.1.0"
+description = "Reverse engineering toolkit for binaries and firmware: file identification, PE/ELF parsing, entropy, strings, deobfuscation, carving and patching."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["reverse-engineering", "malware-analysis", "binary-analysis", "pe", "elf", "firmware", "steganography", "forensics"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Topic :: Software Development :: Disassemblers",
+]
+
+[project.optional-dependencies]
+disasm = ["capstone>=5.0"]
+dev = ["pytest>=7"]
+all = ["capstone>=5.0"]
+
+[project.scripts]
+revkit = "revkit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["revkit*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
